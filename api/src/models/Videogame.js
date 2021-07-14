@@ -14,8 +14,9 @@ module.exports = (sequelize) => {
   // defino el modelo
   sequelize.define('videogame', {
 
-    idgame: {
-      type: DataTypes.STRING,
+    id: {
+      type: DataTypes.UUID,
+      defaultValue: DataTypes.UUIDV4,
       primaryKey: true
     },
     name: {
@@ -25,18 +26,17 @@ module.exports = (sequelize) => {
     description: {
       type: DataTypes.TEXT,
       allowNull: false
-      
     },
-    released:{
-      type:DataTypes.DATE
+    released: {
+      type: DataTypes.STRING
     },
-    rating:{
-      type:DataTypes.STRING
+    rating: {
+      type: DataTypes.INTEGER
     },
-    plataforms:{
-      type:DataTypes.STRING,
+    platforms: {
+      type: DataTypes.STRING,
       allowNull: false
-       
     }
-  }, { timestamps: false });
+  
+  });
 };

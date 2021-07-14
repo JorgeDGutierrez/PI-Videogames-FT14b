@@ -7,7 +7,7 @@ const fetch =require('node-fetch')
 
 
 const {
-  DB_USER, DB_PASSWORD, DB_HOST,API_KEY,
+  DB_USER, DB_PASSWORD, DB_HOST,
 } = process.env;
 
 const sequelize = new Sequelize(`postgres://${DB_USER}:${DB_PASSWORD}@${DB_HOST}/videogames`, {

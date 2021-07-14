@@ -20,8 +20,7 @@
 require("dotenv").config();
 const server = require('./src/app.js'); //Aqui es donde estoy inciando el servidor
 const { conn, Genres } = require('./src/db.js'); // estoy requiendo la base de datos, al requerirlo se ejecuta la DB
-const fetch = require("node-fetch");
-const {API_KEY} = process.env;
+
 
 
 // Syncing all the models at once.
