@@ -57,8 +57,8 @@ const { Videogame, Genre } = require('../db');
 })
 router.get('/videogame/:videogameid', async (req, res) => {
     const { videogameid } = req.params
-    if (idVideogame.includes('-')) {
-        let videogameDb = await Videogame.findOne({
+    if (videogameid.includes('-')) {
+        let videogameDb = await Videogame.findAll({
             where: {
                 id: videogameid,
             },
