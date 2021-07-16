@@ -4,6 +4,7 @@ const { Router } = require('express');
 const router = Router();
 const axios = require('axios').default;
 const { Videogame, Genre } = require('../db');
+const genres = require('../routes/genres.js')
 
 
  
@@ -55,12 +56,23 @@ const { Videogame, Genre } = require('../db');
         }
     }
 })
-router.get('/videogame/:videogameid', async (req, res) => {
-    const { videogameid } = req.params
-    if (videogameid.includes('-')) {
-        let videogameDb = await Videogame.findAll({
+router.get('/idVideogame', async (req, res) => {
+    let videogamesDb = await Videogame.findAll({
+        include: Genre
+    });
+    //Parseamos el objeto recibido de findAll porque es una referencia circular (?)
+    videogamesDb = JSON.stringify(videogamesDb);
+    videogamesDb = JSON.parse(videogamesDb);
+    //Aca dejamos el arreglo de generos plano con solo los nombres de cada genero
+    videogamesDb = videogamesDb.reduce((acc, el) => acc.concat({
+        ...el,
+        genres: el.genres.map(g => g.name)
+    }), [])
+    const { idVideogame } = req.params
+    if (idVideogame.includes('-')) {
+        let videogameDb = await Videogame.findOne({
             where: {
-                id: videogameid,
+                id: idVideogame,
             },
             include: Genre
         })
@@ -71,8 +83,8 @@ router.get('/videogame/:videogameid', async (req, res) => {
     };
 
     try {
-        const response = await axios.get(`https://api.rawg.io/api/games/${videogameid}?key=${API_KEY}`);
-        let { name, background_image, genres, description, released: released, rating, platforms } = response.data;
+        const response = await axios.get(`https://api.rawg.io/api/games/${idVideogame}?key=${API_KEY}`);
+        let { name, background_image, genres, description, released, rating, platforms } = response.data;
         genres = genres.map(g => g.name);
         platforms = platforms.map(p => p.platform.name);
         return res.json({

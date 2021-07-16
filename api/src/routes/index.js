@@ -17,7 +17,7 @@ router.use('/videogames', videogames);
 router.use('/videogame',videogame);
 router.use('/genres', genres);
 
-//router.use('/videogame/:videogameid',videogameid)
+
 
 
 
