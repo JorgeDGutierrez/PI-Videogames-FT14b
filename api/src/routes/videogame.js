@@ -31,49 +31,10 @@ let videogame = await Videogame.create({
     })
     allGenres.forEach(gen => videogame.setGenres(gen[0]));
 res.json(videogame);
-    // let { name, description, released, rating, genres, platforms } = req.body;
-    // //platforms = platforms.join(', ');
-    // const genreAdapted = [];
-    // genres.map( gen => genreAdapted.push({name: gen}));
-    // try {
-    //      await Videogame.create({
-            
-    //             name,
-    //             description,
-    //             released,
-    //             rating,
-    //             platforms,
-    //             generos:genreAdapted
-            
-    //     },{ 
-    //         include: Genre
-    //     })
-    //    // await gameCreated[0].setGenres(genres);
-    //    res.send('exito')
-    // } catch (err) {
-    //     console.log(err);
-    // }
-    // res.send('Created succesfully')
 
 })
 
-// router.post('/test', async (req, res) => {
-//     const { image, name, genre, description, released, rating, platform } = req.body;
-//     const genreAdapted = [];
-//     genre.map( gen => genreAdapted.push({name: gen}));
-//     await Videogame.create({
-//         image,
-//         name,
-//         description,
-//         released,
-//         rating,
-//         platform,
-//         generos: genreAdapted //[{name:"algo",segundo:"otro"},{name:"algo2"},{name:"algo"}]
-//     },{
-//         include: 'Genre'
-//     })
-//     res.send('exito')
-// })
+
 
 router.get('/:videogameid', async (req, res) => {
     

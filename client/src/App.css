@@ -2,15 +2,9 @@
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+#mobilediv {
+  color: white;
+  background: black;
 }
 
 .App-header {
@@ -24,15 +18,175 @@
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+body {
+  margin: 0;
+  padding: 0;
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+/* Navbar */
+
+.navbar {
+  /* background-color: #316e74; */
+  background: rgb(52, 109, 163);
+  background: linear-gradient(0deg, rgb(33, 45, 114) 0%, rgba(105, 107, 230, 0.562) 100%, rgba(58, 94, 194, 0.507) 100%);
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2rem;
+  position: sticky;
+  top: 0;
+  z-index: 20;
+}
+
+.nav-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 80px;
+  max-width: 1500px;
+}
+
+.nav-logo {
+  font-family: 'Press Start 2P', cursive;
+  color: #fffb00da;
+  align-items: center;
+  margin-left:150px;
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 1.5rem;
+  /* flex-grow: 1; */
+  display: inline-flex;
+}
+
+.nav-menu {
+  display: flex;
+  list-style: none;
+  text-align: center;
+  margin-right: 2rem;
+}
+
+.nav-links {
+  color: rgba(255, 255, 255, 0.945);
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  height: 100%;
+  border-bottom: 3px solid transparent;
+}
+
+.fa-code {
+  margin-left: 1rem;
+}
+
+.nav-item {
+  font-family: 'Press Start 2P', cursive;
+  font-size: 1rem;
+  line-height: 40px;
+  margin-right: 1rem;
+}
+
+.nav-item:after {
+  content: "";
+  display: block;
+  height: 3px;
+  width: 0;
+  background: transparent;
+  transition: width 0.7s ease, background-color 0.5s ease;
+}
+
+.nav-item:hover:after {
+  width: 100%;
+  background: #fcff40;
+}
+
+.nav-item .active {
+  color: #ffdd40;
+}
+
+.nav-icon {
+  display: none;
+}
+
+
+
+@media screen and (max-width: 960px) {
+  .nav-menu {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    border-top: 1px solid #fff;
+    position: absolute;
+    top: 80px;
+    left: -110%;
+    opacity: 1;
+    transition: all 0.5s ease;
   }
-  to {
-    transform: rotate(360deg);
+  .nav-menu.active {
+    background: #1f5156;
+    left: 0px;
+    opacity: 1;
+    transition: all 0.5s ease;
+    z-index: 1;
   }
+  .nav-item .active {
+    color: #ffdd40;
+    border: none;
+  }
+  .nav-links {
+    padding: 1.5rem;
+    width: 100%;
+    display: table;
+  }
+  .nav-icon {
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: translate(-100%, 60%);
+    font-size: 1.8rem;
+    cursor: pointer;
+    color: #ffdd40;
+  }
+}
+
+.page-link {
+  position: relative;
+  display: block;
+  padding: .5rem .75rem;
+  margin-left: 10px;
+  line-height: 1.25;
+  text-decoration: none;
+  color: #000000;
+  font-family: 'Press Start 2P';
+  background-color: rgba(255, 255, 255, 0.4);
+  border: 1px solid #dee2e6;
+  border-radius: 50%;
+}
+
+.page-link:hover {
+  transition: 500ms;
+  z-index: 2;
+  color: #ffffff;
+  text-decoration: none;
+  background-color: #000000;
+  border-color: #dee2e6
+}
+
+.page-link:focus {
+  z-index: 2;
+  outline: 0;
+  box-shadow: 0 0 0 .2rem rgba(9, 255, 0, 0.25)
+}
+
+.pagination {
+  display: -ms-flexbox;
+  display: flex;
+  padding-left: 0;
+  list-style: none;
+  border-radius: .25rem;
+  justify-content: center;
 }
