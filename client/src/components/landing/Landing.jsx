@@ -1,17 +1,15 @@
 import React from 'react';
-import {Link} from 'react-router-dom';
+import s from './Landing.module.css';
+import { Link } from 'react-router-dom'
 
-import styles from './Landing.module.css';
-function Landing(){
+function Landing() {
     return (
-        <div className={styles.landing}>
-            <h1 className={styles.title}>Videogames App</h1>
+        <div className={s.landing}>
+            <h1 className={s.title}>Videogames App</h1>
             <Link to='/videogames'>
-            <button className={styles.boton}>Entrar</button>
+                <button className={s.boton}>Play!</button>
             </Link>
         </div>
-
     )
 }
-
 export default Landing;

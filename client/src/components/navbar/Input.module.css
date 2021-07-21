@@ -1,0 +1,24 @@
+.form {
+    margin: auto;
+}
+
+.input {
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    width: 15rem;
+    height: 22px;
+    background:#161616be;
+    color:rgba(255, 255, 255, 0.774);
+    font-size:15px;
+}
+
+.search {
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    border-radius:30px;
+    height: 40px;
+    
+    background: #9b1010e7;
+    color:#000000
+}
+.search:hover {
+    color:#ffffff;
+}

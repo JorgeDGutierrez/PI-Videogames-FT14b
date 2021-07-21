@@ -1,8 +1,8 @@
-.juegocreado {
-    background-image: url('./animated-gifs-of-fighting-game-backgrounds-17.gif');
+.crearJuego {
+    background-image: url('./8053b12dc8d93c68837691fb3ba8353e.gif');
     padding-left: 0;
     padding-right: 0;
-    height: 108%;
+    height: 100%;
     width: 100%;
     background-size:cover;
     background-position:center center;
@@ -11,29 +11,30 @@
     text-align:center;
     font-weight: 600;
 }
-.envoltura {
+
+.wrapper {
     height: 578px;
     text-align: center;
-    padding-top:10px;
+    padding-top: 5px;
 }
 
 .contenedor {
-    background: rgba(129, 127, 127, 0.555);;
+    background: rgba(255, 255, 255, 0.267);;
     margin: auto;
-    width: 590px;
+    width: 800px;
     height: 590px;
-    border-radius: 18%;
+    border-radius: 10%;
 }
 
 .title {
     font-size: 30px;
-    margin: 1px;
-    padding: 1px;
+    margin: 0px;
+    padding: 0px;
 }
 
 .textarea {
     max-height: 200px;
-    max-width:160px;
+    max-width:200px;
     min-height:50px;
 }
 
@@ -46,13 +47,13 @@
 }
 
 .labelTitle {
-    font-size: 19px;
+    font-size: 20px;
 }
 .divgenre {
     display:inline-block;
 }
 
-.platformsContenedor {
+.platformsContainer {
     font-size: 13px;
     display:inline-flex;
     flex-direction: column;
@@ -84,8 +85,31 @@
 	position:relative;
 	top:1px;
 }
-
-.error {
-    background-color: #bab1ba;
-    border: 2px solid rgba(238, 9, 9, 0.356);
+.botonBorrar {
+	box-shadow: 2px 4px 0px 0px #818396;
+	background:linear-gradient(to bottom, #c41621 5%, #bab1ba 100%);
+	background-color:#c41621;
+	border-radius:13px;
+	border:2px solid #820808;
+	display:inline-block;
+	cursor:pointer;
+	color:#141617;
+	font-family:Impact;
+	font-size:18px;
+	font-weight:bold;
+	padding:13px 11px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #e1e2ed;
 }
+.botonBorrar:hover {
+	background:linear-gradient(to bottom, #bab1ba 5%, #c41621 100%);
+	background-color:#bab1ba;
+}
+.botonBorrar:active {
+	position:relative;
+	top:1px;
+}
+.error {
+    border: 5px solid rgb(68, 1, 1);
+}
+

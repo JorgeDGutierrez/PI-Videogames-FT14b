@@ -15,7 +15,7 @@ router.get('/', async (req, res) => {
 
     const response = await axios.get(`https://api.rawg.io/api/genres?key=${API_KEY}`);
     const genres = response.data.results;
-    genres.forEach(async g => {
+    genres.map(async g => {
         await Genre.findOrCreate({
             where: {
                 name: g.name

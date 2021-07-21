@@ -1,0 +1,18 @@
+.background {
+    background-image: url('./animated-gifs-of-fighting-game-backgrounds-27.gif');
+    padding-left: 0;
+    padding-right: 0;
+    height: 100%;
+    width: 100%;
+    background-size:cover;
+    background-position:center center;
+    background-repeat:no-repeat;
+    position:absolute;
+    text-align:center;
+}
+
+.games {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}

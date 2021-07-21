@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import styles from '../createGame/CreateGame.module.css';
+import styles from './CreateGame.module.css'
 import Navbar from '../navbar/Navbar'
 import axios from 'axios';
 
@@ -16,6 +16,8 @@ function CreateGame() {
 
     const handleChange = e => {
         if (e.target.parentNode.parentNode.id === 'genres') {
+            
+            
             if (e.target.checked) {
                 setForm(prevState => ({
                     ...prevState,
@@ -50,6 +52,7 @@ function CreateGame() {
         setErrors(validate({
             ...form,
             [e.target.name]: e.target.value
+            
         }))
     }
     const validate = form => {
@@ -69,26 +72,35 @@ function CreateGame() {
         } else if (!/^[1-5]$/.test(form.rating)) {
             errors.rating = 'Rating must be between 1 and 5';
         }
+        
         return errors;
     }
+    
     const handleSubmit = e => {
         e.preventDefault()
+        e.target.reset()
+       
+        
         validate(form);
         let checkboxsErrors = []
         if (form.genres.length < 1) checkboxsErrors.push('Genres is required');
         if (form.platforms.length < 1) checkboxsErrors.push('Platforms is required');
         if (Object.values(errors).length || checkboxsErrors.length) {
+            
             return alert(Object.values(errors).concat(checkboxsErrors).join('\n'));
         }
+
         axios.post('http://localhost:3001/videogame', form)
         alert(`${form.name} created succesfully`)
-        // window.location.href = 'http://localhost:3000/videogames'
+       
+        
     }
+    
 
     return (
-        <div className={styles.juegocreado}>
+        <div className={styles.crearJuego}>
             <Navbar />
-            <div className={styles.envoltura}>
+            <div className={styles.wrapper}>
                 <div className={styles.contenedor}>
                     <h1 className={styles.title}>Create your own Game</h1>
                     <form onSubmit={handleSubmit} onChange={handleChange}>
@@ -106,7 +118,7 @@ function CreateGame() {
                         <br />
                         <label htmlFor="rating">Rating: </label>
                         <br />
-                        <input name='rating' className={errors.rating && styles.error} placeholder='Rate from 1 to 5' type="tel" id="rating" maxLength='1' />
+                        <input name='rating' className={errors.rating && styles.error} placeholder='Rate del 1 to 5' type="number" id="rating" min= '1' max='5' maxLength='1' />
                         <br />
                         <div id='genres' className={styles.genresContenedor}>
                             <label className={styles.labelTitle}>Genres </label>
@@ -152,7 +164,7 @@ function CreateGame() {
                             </div>
                             <div className={styles.divgenre}>
                                 <label htmlFor="Platformer">Platformer</label>
-                                <input name='Platformer' value='11' type="checkbox" id="Platformer" />
+                                <input name='Platformer' value='Platformer' type="checkbox" id="Platformer" />
                             </div>
                             <div className={styles.divgenre}>
                                 <label htmlFor="Racing">Racing</label>
@@ -172,7 +184,7 @@ function CreateGame() {
                             </div>
                         </div>
                         {/* END GENRES */}
-                        <div id='platforms' className={styles.platformsContenedor}>
+                        <div id='platforms' className={styles.platformsContainer}>
                             <label className={styles.labelTitle}>Platforms </label>
                             <div className={styles.divgenre}>
                                 <label htmlFor="PC">PC</label>
@@ -208,11 +220,16 @@ function CreateGame() {
                             </div>
                         </div>
                         <br />
-                        <button className={styles.boton} type='submit'>Create</button>
+                        <button className={styles.boton}  type='submit' >Create</button>
+                        {/* <button  className={styles.botonBorrar} type="reset" value="Borrar información"> Borrar formulario</button> */}
+                        
+                    
+                        
                     </form>
                 </div>
             </div>
         </div>
     )
+    
 }
 export default CreateGame;

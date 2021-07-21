@@ -1,9 +1,9 @@
 import React, { useEffect } from 'react';
 import s from './GameDetail.module.css'
 import { useDispatch, useSelector } from 'react-redux';
-import { getVideoGamesDetails } from '../../redux/actions';
+import { getVideogameDetail } from '../../redux/actions';
 import Navbar from '../navbar/Navbar';
-//import Loading from '../loading/Loading.jsx';
+ //import Loading from '../loading/Loading';
 import { useParams } from 'react-router-dom';
 
 function GameDetail() {
@@ -13,7 +13,7 @@ function GameDetail() {
     const videogameDetail = useSelector(state => state.videogameDetail)
 
     useEffect(() => {
-        dispatch(getVideoGamesDetails(idVideogame))
+        dispatch(getVideogameDetail(idVideogame))
     }, [dispatch, idVideogame])
 
     return (
@@ -23,11 +23,11 @@ function GameDetail() {
                 <div className={s.container}>
                     {videogameDetail ? <div>
                         <h3 className={s.name}>{videogameDetail.name}</h3>
-                        <img className={s.image} src={videogameDetail.background_image || 'https://myvideogamelist.com/assets/images/default.png'} alt="" />
+                        <img className={s.image} src={videogameDetail.background_image || 'https://image.flaticon.com/icons/png/512/1176/1176359.png'} alt="" />
                         <p className={s.description}>{videogameDetail.description.replace(/(<([^>]+)>)/ig, '')}</p>
                         <p className={s.genres}>{`Genres: ${videogameDetail.genres.join(', ')}`}</p>
                         <p className={s.genres}>{`Platforms: ${typeof videogameDetail.platforms === 'string' ? videogameDetail.platforms : videogameDetail.platforms.join(', ')}`}</p>
-                        <p className={s.genres}>{`Release Date: ${videogameDetail.releaseDate || 'None'}`}</p>
+                        <p className={s.genres}>{`Release Date: ${videogameDetail.released || 'None'}`}</p>
                         <p className={s.genres}>{`Rating: ★ ${videogameDetail.rating}`}</p>
 
                     </div> : <h1>Cargando</h1>}

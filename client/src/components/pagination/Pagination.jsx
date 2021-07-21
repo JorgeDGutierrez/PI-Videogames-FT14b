@@ -1,3 +1,5 @@
+import React from 'react';
+
 function Pagination({ gamesPerPage, totalGames, paginate }) {
     const pageNumbers = [];
     for (let i = 1; i <= Math.ceil(totalGames / gamesPerPage); i++) {
@@ -20,4 +22,3 @@ function Pagination({ gamesPerPage, totalGames, paginate }) {
 }
 
 export default Pagination;
-

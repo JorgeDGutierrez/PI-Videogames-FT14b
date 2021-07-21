@@ -23,7 +23,8 @@ const genres = require('../routes/genres.js')
 
     if (req.query.name) {
         try {
-            let response = await axios.get(`https://api.rawg.io/api/games?search=${req.query.name}&key=${API_KEY}`);
+            let name = req.query.name;
+            let response = await axios.get(`https://api.rawg.io/api/games?search=${name}&key=${API_KEY}`);
             if (!response.data.count) return res.status(404).send(`No se encontro ningun videojuego con el nombre "${req.query.name}"`);
             response.data.results = response.data.results.reduce((acc, el) => acc.concat({
                 ...el,
@@ -84,6 +85,7 @@ router.get('/idVideogame', async (req, res) => {
 
     try {
         const response = await axios.get(`https://api.rawg.io/api/games/${idVideogame}?key=${API_KEY}`);
+        console.log(response)
         let { name, background_image, genres, description, released, rating, platforms } = response.data;
         genres = genres.map(g => g.name);
         platforms = platforms.map(p => p.platform.name);

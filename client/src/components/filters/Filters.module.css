@@ -1,0 +1,16 @@
+.span {
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 15px;
+    color: rgb(245, 241, 241);
+}
+.container {
+    display: inline-grid;
+    margin-top: 12px;
+    margin-right: 30px;
+    background: rgba(73, 2, 2, 0.8); 
+}
+
+.select {
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 15px;
+}
