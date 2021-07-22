@@ -24,6 +24,7 @@ function App() {
       <Route exact path='/create' component={CreateGame} />
       <Route exact path='/videogames' component={Home} />
       <Route exact path='/videogame/:idVideogame' component={GameDetail} />
+      
     </>
   );
 }

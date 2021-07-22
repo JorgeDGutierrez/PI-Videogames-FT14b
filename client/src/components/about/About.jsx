@@ -1,27 +1,24 @@
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux'
 import { NavLink } from 'react-router-dom';
-import s from './Input.module.css'
+
 import { searchByName } from '../../redux/actions';
-//Navbar Styles ↓
-import '../../App.css'
-function Navbar() {
+
+
+function About() {
     const dispatch = useDispatch();
     const [input, setInput] = useState('')
     const handleInput = (e) => {
-        
+        // dispatch(filterByName(e.target.value))
         
         setInput(e.target.value)
         
     }
-    const handleSearch = (e) =>  {
+    const handleSearch = (e) => {
+        e.preventDefault();
         
-            e.preventDefault();
-        
-            dispatch(searchByName(input));
-            setInput('')
-        
-        
+        dispatch(searchByName(input));
+       
     }
 
     const [click, setClick] = useState(false);
@@ -34,9 +31,9 @@ function Navbar() {
                         Videogames App
                         <i className="fas fa-code"></i>
                     </NavLink>
-                    <form className={s.form} >
-                        <input onChange={handleInput} className={s.input} type="text" placeholder='Search games' spellCheck='false' />
-                        <button onClick={handleSearch} className={s.search}>Search</button>
+                    <form  >
+                        <input onChange={handleInput}  type="text" placeholder='Search games' spellCheck='false' />
+                        <button onClick={handleSearch} >Search</button>
                     </form>
                     <ul className={click ? "nav-menu active" : "nav-menu"}>
                         <li className="nav-item">
@@ -83,7 +80,7 @@ function Navbar() {
                         </li>
                     </ul>
                     <div className="nav-icon" onClick={handleClick}>
-                        <i className={click ? "fas fa-times" : "fas fa-bars"}></i>
+                       
                     </div>
                 </div>
             </nav>
@@ -91,4 +88,4 @@ function Navbar() {
     )
 }
 
-export default Navbar;
+export default About;
