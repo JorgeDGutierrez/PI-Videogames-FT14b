@@ -45,6 +45,6 @@ export const SORT_BY_RATING = "SORT_BY_RATING";
 export function sortByRating(payload) {
     return { type: SORT_BY_RATING, payload: payload };
 }
-    
-    
+
+
 

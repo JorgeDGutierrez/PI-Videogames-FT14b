@@ -23,7 +23,7 @@ function GameDetail() {
                 <div className={s.container}>
                     {videogameDetail ? <div>
                         <h3 className={s.name}>{videogameDetail.name}</h3>
-                        <img className={s.image} src={videogameDetail.background_image || 'https://image.flaticon.com/icons/png/512/1176/1176359.png'} alt="" />
+                        <img className={s.image} src={videogameDetail.background_image || 'https://www.eleconomista.com.mx/__export/1581119523386/sites/eleconomista/img/2020/02/07/que-son-esports.jpg_423392900.jpg'} alt="" />
                         <p className={s.description}>{videogameDetail.description.replace(/(<([^>]+)>)/ig, '')}</p>
                         <p className={s.genres}>{`Genres: ${videogameDetail.genres.join(', ')}`}</p>
                         <p className={s.genres}>{`Platforms: ${typeof videogameDetail.platforms === 'string' ? videogameDetail.platforms : videogameDetail.platforms.join(', ')}`}</p>

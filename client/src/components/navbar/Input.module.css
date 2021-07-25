@@ -9,15 +9,23 @@
     background:#161616be;
     color:rgba(255, 255, 255, 0.774);
     font-size:15px;
+    border-radius: 8px;
+    box-shadow: 8px 10px 14px 6px rgba(127,12,12,0.63);
+-webkit-box-shadow: 8px 10px 14px 6px rgba(127,12,12,0.63);
+-moz-box-shadow: 8px 10px 14px 6px rgba(127,12,12,0.63);
 }
 
 .search {
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     border-radius:30px;
     height: 40px;
-    
     background: #9b1010e7;
-    color:#000000
+    color:#000000;
+    border-radius: 10px;
+    margin: 5px;
+    box-shadow: 8px 10px 14px 6px rgba(127,12,12,0.63);
+-webkit-box-shadow: 8px 10px 14px 6px rgba(127,12,12,0.63);
+-moz-box-shadow: 8px 10px 14px 6px rgba(127,12,12,0.63);
 }
 .search:hover {
     color:#ffffff;

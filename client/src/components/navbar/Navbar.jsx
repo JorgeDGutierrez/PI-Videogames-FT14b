@@ -3,7 +3,6 @@ import { useDispatch } from 'react-redux'
 import { NavLink } from 'react-router-dom';
 import s from './Input.module.css'
 import { searchByName } from '../../redux/actions';
-//Navbar Styles ↓
 import '../../App.css'
 function Navbar() {
     const dispatch = useDispatch();
@@ -17,7 +16,6 @@ function Navbar() {
     const handleSearch = (e) =>  {
         
             e.preventDefault();
-        
             dispatch(searchByName(input));
             setInput('')
         
@@ -34,13 +32,18 @@ function Navbar() {
                         Videogames App
                         <i className="fas fa-code"></i>
                     </NavLink>
+                    
                     <form className={s.form} >
-                        <input onChange={handleInput} className={s.input} type="text" placeholder='Search games' spellCheck='false' />
-                        <button onClick={handleSearch} className={s.search}>Search</button>
+                    <input onChange={handleInput}  className={s.input} type="text" placeholder='Search games' spellCheck='false' />
+                    <button onClick={handleSearch} className={s.search}>Search</button>
                     </form>
+                    
+                    
                     <ul className={click ? "nav-menu active" : "nav-menu"}>
                         <li className="nav-item">
+                        
                             <NavLink
+                                
                                 exact
                                 to="/videogames"
                                 activeClassName="active"
@@ -59,17 +62,7 @@ function Navbar() {
                                 Create
                             </NavLink>
                         </li>
-                        <li className="nav-item">
-                            <NavLink
-                                exact
-                                to="/Favorites"
-                                activeClassName="active"
-                                className="nav-links"
-                                onClick={handleClick}
-                            >
-                                Favorites
-                            </NavLink>
-                        </li>
+                        
                         <li className="nav-item">
                             <NavLink
                                 exact
@@ -82,9 +75,9 @@ function Navbar() {
                             </NavLink>
                         </li>
                     </ul>
-                    <div className="nav-icon" onClick={handleClick}>
+                    {<div className="nav-icon" onClick={handleClick}>
                         <i className={click ? "fas fa-times" : "fas fa-bars"}></i>
-                    </div>
+                    </div>}
                 </div>
             </nav>
         </>

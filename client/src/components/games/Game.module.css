@@ -1,9 +1,9 @@
 .game {
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     font-size: 18px;
-    margin-right: 10px;
-    margin-left: 10px;
-    margin-top: 10px;
+    margin-right: 8px;
+    margin-left: 8px;
+    margin-top: 5px;
     width: 14rem;
     position: relative;
     display: -ms-flexbox;
@@ -12,14 +12,17 @@
     flex-direction: column;
     min-width: 0;
     word-wrap: break-word;
-    background-color: rgba(196, 115, 115, 0.274);
+    background-color: rgba(58, 93, 158, 0.274);
     background-clip: border-box;
-    border: 1px solid rgba(134, 112, 112, 0.125);
+    border: 1px solid rgba(90, 56, 56, 0.125);
     border-radius: 30px;
+    
+    
 }
 .title {
     color:aliceblue;
     margin-bottom: 15px;
+    
 }
 .genres {
     color:aliceblue;
@@ -28,8 +31,9 @@
     font-size: 13px;
 }
 .image {
-    width: 100px;
-    height: 80px;
+    width: 90px;
+    height: 70px;
+    
 }
 
 .rating {

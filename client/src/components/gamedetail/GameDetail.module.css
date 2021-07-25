@@ -1,5 +1,5 @@
 .gamedetail {
-    background-image: url('./animated-gifs-of-fighting-game-backgrounds-36.gif');
+    background-image: url('./Guilty-Gear-XX-Reload-Arcade-Video-Game-2002-Sammy-Backgrounds-Stages-Zappa-Sprites.gif');
     padding-left: 0;
     padding-right: 0;
     height: 100%;
@@ -9,40 +9,65 @@
     background-repeat: no-repeat;
     position:absolute;
     text-align:center;
+    
 }
 
 .wrapper {
-    height: 578px;
+    height: 300px;
     text-align: center;
-    padding-top: 10px;
+    padding-top: 2px;
+    letter-spacing: 2pt;      /* para separar entgre letras */
+    word-spacing: 5pt;        /* para separacion entre palabras */  
+    line-height: 10pt;        /* para la separacion entre lineas */
 }
 
 .container {
-    background: rgba(192, 73, 73, 0.52);;
+    background: rgba(241, 207, 219, 0.89);;
     margin: auto;
-    width: 800px;
-    height: 590px;
-    border-radius: 10%;
+    width: 1000px;
+    height: 606px;
+    border-radius: 5%;
+    
 }
 .name {
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-size: 30px;
-    padding-top: 20px;
+    padding-top: 10px;
+    color:rgb(3, 1, 1);
+    text-shadow: 0px 3px 3px rgba(160, 15, 15, 0.897);
+    
+    
 }
 .description {
     font-size: 12px;
-    color:aliceblue;
-    font-weight:500 ;
-}
+    text-align: left;
+    margin:2%;
+    font-weight: 200;
+    color:rgba(19, 12, 6, 0.993);
+    /* text-shadow: 0px 3px 3px rgb(56, 52, 52); */
+    letter-spacing: 2pt;      /* para separar entgre letras */
+    word-spacing: 5pt;        /* para separacion entre palabras */  
+    line-height: 10pt;        /* para la separacion entre lineas */  
+    box-shadow: 8px 10px 14px 6px rgba(127, 12, 12, 0.24);
+  -webkit-box-shadow: 8px 10px 14px 6px rgba(127, 12, 12, 0.246);
+  -moz-box-shadow: 8px 10px 14px 6px rgba(127, 12, 12, 0.246);
+}   
+
 .image {
-    width: 200px;    
-    height: 200px;
-    border-radius: 20%;
+    width: 180px;    
+    height: 120px;
+    border-radius: 10%;
+    
 }
 
 .genres {
     display:inline-block;
-    color:aliceblue;
-    margin-right:100px;
-    margin-left:100px;
+    color:rgb(3, 1, 1);
+    /* text-shadow: 0px 3px 3px rgb(214, 59, 59); */
+    margin-right:40px;
+    margin-left:40px;
+    letter-spacing: 1pt;      /* para separar entgre letras */
+    word-spacing: 5pt;        /* para separacion entre palabras */  
+    line-height: 10pt;        /* para la separacion entre lineas */ 
+
 }

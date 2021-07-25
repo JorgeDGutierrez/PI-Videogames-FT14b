@@ -2,10 +2,7 @@
   text-align: center;
 }
 
-#mobilediv {
-  color: white;
-  background: black;
-}
+
 
 .App-header {
   background-color: #282c34;
@@ -30,18 +27,26 @@ body {
 
 .navbar {
   /* background-color: #316e74; */
-  background: rgba(52, 109, 163, 0.363);
-  background: linear-gradient(0deg, rgba(114, 63, 33, 0.445) 0%, rgba(105, 107, 230, 0.562) 100%, rgba(58, 94, 194, 0.507) 100%);
-  height: 60px;
+ /*  background: rgba(52, 109, 163, 0.363); */
+  background: linear-gradient(0deg, rgba(180, 129, 105, 0.815) 0%, rgba(105, 107, 230, 0.562) 100%, rgba(58, 94, 194, 0.507) 100%);
+  height: 50px;
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 1.2rem;
+  font-size: 1.4rem;
   position: sticky;
   top: 0;
   z-index: 20;
-}
-
+  box-shadow: 8px 10px 14px 6px rgba(127, 12, 12, 0.246);
+  -webkit-box-shadow: 8px 10px 14px 6px rgba(127, 12, 12, 0.246);
+  -moz-box-shadow: 8px 10px 14px 6px rgba(127, 12, 12, 0.246);
+  opacity:0.5;
+  filter:alpha(Opacity=1);
+  }
+  .navbar:hover {
+    opacity: 2.0;
+    filter: alpha(Opacity=100,FinishedOpacity=100);
+  }
 .nav-container {
   display: flex;
   justify-content: center;
@@ -53,7 +58,8 @@ body {
 
 .nav-logo {
   font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-  color: #bd8111fd;
+  color: #babd11fd;
+  text-shadow: -3px 1px 7px rgba(8, 45, 85, 0.856);
   align-items: center;
   margin-left:150px;
   cursor: pointer;
@@ -61,13 +67,23 @@ body {
   font-size: 1.5rem;
   /* flex-grow: 1; */
   display: inline-flex;
+  box-shadow: 8px 10px 14px 6px rgba(127,12,12,0.63);
+-webkit-box-shadow: 8px 10px 14px 6px rgba(127,12,12,0.63);
+-moz-box-shadow: 8px 10px 14px 6px rgba(127,12,12,0.63);
+text-shadow: #FFF 0px 0px 5px, #FFF 0px 0px 10px, #FFF 0px 0px 15px, #FF2D95 0px 0px 20px, #FF2D95 0px 0px 30px, #FF2D95 0px 0px 40px, #FF2D95 0px 0px 50px, #FF2D95 0px 0px 75px, 7px -23px 16px rgba(66,31,178,0.63);
+color: #680804;
+
 }
 
 .nav-menu {
+  color:#fcff40;
   display: flex;
   list-style: none;
   text-align: center;
   margin-right: 2rem;
+  text-shadow: rgb(156, 53, 53) 0px 0px 5px, rgb(155, 81, 81) 0px 0px 10px, rgb(160, 76, 76) 0px 0px 15px, #7c4b64 0px 0px 20px, #8d7883 0px 0px 30px, #946a7f 0px 0px 40px, #b1843083 0px 0px 50px, #b1843083 0px 0px 75px, 7px -23px 16px rgba(31, 17, 78, 0.63);
+color: #ddddcc;
+
 }
 
 .nav-links {
@@ -76,6 +92,9 @@ body {
   padding: 0.5rem 1rem;
   height: 100%;
   border-bottom: 3px solid transparent;
+  box-shadow: 8px 10px 14px 6px rgba(127,12,12,0.63);
+-webkit-box-shadow: 8px 10px 14px 6px rgba(127,12,12,0.63);
+-moz-box-shadow: 8px 10px 14px 6px rgba(127,12,12,0.63);
 }
 
 .fa-code {
@@ -109,6 +128,7 @@ body {
 
 .nav-icon {
   display: none;
+  
 }
 
 
@@ -162,18 +182,18 @@ body {
   text-decoration: none;
   color: #000000;
   font-family: 'Press Start 2P';
-  background-color: rgba(255, 255, 255, 0.4);
-  border: 1px solid #dee2e6;
+  background-color: rgba(94, 6, 6, 0.4);
+  border: 1px solid #0a2c4e;
   border-radius: 50%;
 }
 
 .page-link:hover {
   transition: 500ms;
   z-index: 2;
-  color: #ffffff;
+  color: #bba1a1;
   text-decoration: none;
   background-color: #000000;
-  border-color: #dee2e6
+  border-color: #bbc4ce
 }
 
 .page-link:focus {

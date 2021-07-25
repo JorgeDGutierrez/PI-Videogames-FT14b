@@ -5,8 +5,9 @@ import './App.css';
 import Landing from './components/landing/Landing';
 import Home from './components/home/Home';
 import GameDetail from './components/gamedetail/GameDetail';
-import { Route } from 'react-router-dom';
+import { Route, Switch} from 'react-router-dom';
 import CreateGame from './components/createGame/CreateGame';
+
 
 
 function App() {
@@ -19,13 +20,15 @@ function App() {
 
 
   return (
+    <Switch>
     <>
       <Route exact path='/' component={Landing} />
       <Route exact path='/create' component={CreateGame} />
       <Route exact path='/videogames' component={Home} />
       <Route exact path='/videogame/:idVideogame' component={GameDetail} />
-      
     </>
+    </Switch>
+    
   );
 }
 

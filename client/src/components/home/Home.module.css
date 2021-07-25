@@ -13,6 +13,11 @@
 
 .games {
     display: flex;
+    flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    margin: 0px -11.5px;
+    
 }
