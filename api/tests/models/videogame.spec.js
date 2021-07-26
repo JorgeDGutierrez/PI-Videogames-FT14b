@@ -1,5 +1,6 @@
 const { Videogame, conn } = require('../../src/db.js');
 const { expect } = require('chai');
+const Genre = require('../../src/models/Genre.js');
 
 describe('Videogame model', () => {
   before(() => conn.authenticate()
@@ -14,9 +15,21 @@ describe('Videogame model', () => {
           .then(() => done(new Error('It requires a valid name')))
           .catch(() => done());
       });
-      it('should work when its a valid name', () => {
-        Recipe.create({ name: 'Super Mario Bros' });
+      it('should throw an error if description is null', (done) => {
+        Videogame.create({ name: 'Dog Hunt' })
+          .then(() => done(new Error('It requires a valid description')))
+          .catch(() => done());
       });
+      it('should throw an error if platforms is null', (done) => {
+        Videogame.create({
+          name: 'Super Mario Bros',
+          description: 'A jumps game',
+        })
+          .then(() => done(new Error('It requires a valid platforms')))
+          .catch(() => done());
+      });
+      
+    
     });
   });
 });

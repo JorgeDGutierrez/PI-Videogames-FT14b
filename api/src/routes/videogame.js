@@ -30,7 +30,12 @@ let videogame = await Videogame.create({
             
     })
     allGenres.forEach(gen => videogame.setGenres(gen[0]));
-res.json(videogame);
+    if(videogame){
+        res.json(videogame);
+    } else {
+        res.status(400).json('game not created')
+
+    }
 
 })
 

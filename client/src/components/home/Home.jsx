@@ -26,6 +26,7 @@ function Home() {
         <main className={s.background}>
             <Navbar />
             <Filters />
+            
             <div>
                 <div className={s.games}>
                     {currentGames ? currentGames.map((e, idx) => <Game props={e} key={idx} />) : <Loading />}
