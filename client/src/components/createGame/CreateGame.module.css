@@ -15,7 +15,7 @@
 .wrapper {
     height: 578px;
     text-align: center;
-    padding-top: 5px;
+    padding-top: 20px;
     
 }
 
@@ -29,8 +29,8 @@
 
 .title {
     font-size: 30px;
-    margin: 0px;
-    padding: 0px;
+    margin: 2px;
+    padding: 1px;
 }
 
 .textarea {
@@ -41,11 +41,12 @@
 
 .genresContenedor {
     font-size: 13px;
+    margin: 10px;
     display:inline-flex;
     flex-direction: column;
     align-items: flex-start;
     font-weight: 600;
-    border: 5px double rgba(2, 15, 24, 0.22);
+    border: 6px solid #ece6e246;
 }
 
 .labelTitle {
@@ -57,11 +58,12 @@
 
 .platformsContainer {
     font-size: 13px;
+    margin: 5px;
     display:inline-flex;
     flex-direction: column;
     align-items: flex-start;
-    font-weight: 600;
-    border: 5px double rgba(2, 15, 24, 0.22);
+    font-weight: 700;
+    border: 6px solid #ece6e246;
 }
 
 .boton {
@@ -88,31 +90,9 @@
 	position:relative;
 	top:1px;
 }
-.botonBorrar {
-	box-shadow: 2px 4px 0px 0px #818396;
-	background:linear-gradient(to bottom, #c41621 5%, #bab1ba 100%);
-	background-color:#c41621;
-	border-radius:13px;
-	border:2px solid #820808;
-	display:inline-block;
-	cursor:pointer;
-	color:#141617;
-	font-family:Impact;
-	font-size:18px;
-	font-weight:bold;
-	padding:13px 11px;
-	text-decoration:none;
-	text-shadow:0px 1px 0px #e1e2ed;
-}
-.botonBorrar:hover {
-	background:linear-gradient(to bottom, #bab1ba 5%, #c41621 100%);
-	background-color:#bab1ba;
-}
-.botonBorrar:active {
-	position:relative;
-	top:1px;
-}
+
 .error {
-    border: 5px solid rgb(68, 1, 1);
+    border: 6px solid rgb(68, 1, 1);
 }
+
 

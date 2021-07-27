@@ -1,16 +1,15 @@
 const {Sequelize, DataTypes } = require('sequelize');
+
 // Exportamos una funcion que define el modelo
 // Luego le injectamos la conexion a sequelize.
 
-// [ ] Genero con las siguientes propiedades:
-// ID
-// Nombre
+
 
 module.exports = (sequelize) => {
   // defino el modelo
     sequelize.define('genre', {
       id: {
-        type: DataTypes.UUID,
+        type: DataTypes.UUID, //UUID me genera los id de los generos
         defaultValue: DataTypes.UUIDV4,
         primaryKey: true
       },

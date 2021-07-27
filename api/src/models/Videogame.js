@@ -2,20 +2,13 @@ const {Sequelize, DataTypes } = require('sequelize');
 // Exportamos una funcion que define el modelo
 // Luego le injectamos la conexion a sequelize.
 
-// [ ] Videojuego con las siguientes propiedades:
-// ID: * No puede ser un ID de un videojuego ya existente en la API rawg
-// Nombre *
-// Descripción *
-// Fecha de lanzamiento
-// Rating
-// Plataformas *
 
 module.exports = (sequelize) => {
   // defino el modelo
   sequelize.define('videogame', {
 
     id: {
-      type: DataTypes.UUID,
+      type: DataTypes.UUID, //UUID genera los id de los juegos creados en la base de datos
       defaultValue: DataTypes.UUIDV4,
       primaryKey: true
     },
@@ -25,13 +18,13 @@ module.exports = (sequelize) => {
     },
     description: {
       type: DataTypes.TEXT,
-      allowNull: false
+      allowNull: false //se pone en false para que sea obligatorio ingresar el dato en la base de datos
     },
     released: {
       type: DataTypes.STRING
     },
     rating: {
-      type: DataTypes.INTEGER
+      type: DataTypes.INTEGER //se pone INTEGER para mandarle un numero
     },
     platforms: {
       type: DataTypes.STRING,

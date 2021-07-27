@@ -46,7 +46,7 @@ function rootReducer(state = initalState, action) {
             if (action.payload === 'high') return { ...state, videogames: [...state.videogames].sort((a, b) => a.rating > b.rating ? -1 : 1) }
             return { ...state, videogames: [...state.videogames].sort((a, b) => a.rating > b.rating ? 1 : -1) }
         }
-             
+        
     
         default: return state;
     }

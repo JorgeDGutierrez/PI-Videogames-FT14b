@@ -7,9 +7,12 @@ const { Videogame, Genre } = require('../db');
 
 
 //POST a /videogame
-router.post('/', async (req, res) => {
+router.post('/', async (req, res) => {//con POST se crean los videojuegos
     let { name, description, released, rating, genres, platforms } = req.body;
+    //se requiere el body para poder recibir los datos del formarulario
     let genreDt = genres.map(gen => {
+        //con map se hace el recorrido de los datos existentes y vamos a 
+        //regresar el genero si lo encuentra o lo crea
         return Genre.findOrCreate({
             where:{
                 name: gen
@@ -18,8 +21,10 @@ router.post('/', async (req, res) => {
     });        
     
 let allGenres = await Promise.all(genreDt);
+//allGenres son varias promesas que recibe como parametro la base de datos
 console.log(allGenres)
-let videogame = await Videogame.create({
+//con console.log(allGenres) vamos a ver todo lo que nos esta mandando
+let videogame = await Videogame.create({//se crea y se manda a la base de datos
             
     name,
     description,
@@ -30,9 +35,10 @@ let videogame = await Videogame.create({
             
     })
     allGenres.forEach(gen => videogame.setGenres(gen[0]));
-    if(videogame){
+    //se hace el recorrido de los generos y los muestra 
+    if(videogame){//si hay videogame lo muestra con el json
         res.json(videogame);
-    } else {
+    } else {//de lo contrario arroja un status 400
         res.status(400).json('game not created')
 
     }
@@ -42,24 +48,35 @@ let videogame = await Videogame.create({
 
 
 router.get('/:videogameid', async (req, res) => {
+    //esta ruta se creo para poder utilizar los detalles de cada videojuego
+    const { videogameid } = req.params// se requiere params para poder buscar por id
     
-    const { videogameid } = req.params
-    
-    if (videogameid.includes('-')) {
+    if (videogameid.includes('-')) {//se utiliza el includes porque el id contiene guiones
         let videogameDb = await Videogame.findByPk(videogameid,{include: Genre})
-        videogameDb = JSON.stringify(videogameDb);
-        videogameDb = JSON.parse(videogameDb);
-        videogameDb.genres = videogameDb.genres.map(g => g.name);
+        //se busca en la base de datos el videojuego y se incluye el  la tabla degenero  
         
+        videogameDb = JSON.stringify(videogameDb);//convierte un objeto o valor 
+                                                //de JavaScript en una cadena de texto JSON
+        videogameDb = JSON.parse(videogameDb);//transforma la cadena de JSON para que se pueda 
+                                            //utilizar
+        videogameDb.genres = videogameDb.genres.map(g => g.name);
+        //se hace el recorrido para entrar a genres y ver lo que hay
         res.send(videogameDb)
     };
 
-    try {
+    try {//se utililiza el try/catch 
+        /**
+         * con try se intenta hacer esto
+         */
         const response = await axios.get(`https://api.rawg.io/api/games/${videogameid}?key=${API_KEY}`);
-        let { name, background_image, genres, description, released: released, rating, platforms } = response.data;
+        //se utiliza la promesa para poder obtener los datos de la api
+        let { name, background_image, genres, description, released: released, rating, platforms } = response.data;// estas son las propiedades que se necesitan de la api
         genres = genres.map(g => g.name);
         platforms = platforms.map(p => p.platform.name);
-        return res.json({
+        /**
+         * generos y platforms se recorren con el map parque en la api vienen como un array
+         */
+        return res.json({//se responde con json obteniendo todas las propiedades que necesito
             name,
             background_image,
             genres,
@@ -68,11 +85,11 @@ router.get('/:videogameid', async (req, res) => {
             rating,
             platforms
         })
-    } catch (err) {
+    } catch (err) {// si no, se manda el error
         return console.log(err)
     }
 })
 
 
 
-module.exports = router;
+module.exports = router;//se exporta el router

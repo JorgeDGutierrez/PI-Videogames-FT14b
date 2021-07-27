@@ -61,7 +61,9 @@ function CreateGame() {
             errors.name = 'Game Name is required';
         } else if (form.name.length < 4) {
             errors.name = 'Game Name must have at least 4 characters';
-        }
+        } 
+        
+
         if (!form.description) {
             errors.description = 'Description is required';
         } else if (form.description.length < 8) {
@@ -86,7 +88,7 @@ function CreateGame() {
         if (form.genres.length < 1) checkboxsErrors.push('Genres is required');
         if (form.platforms.length < 1) checkboxsErrors.push('Platforms is required');
         if (Object.values(errors).length || checkboxsErrors.length) {
-            
+        
             return alert(Object.values(errors).concat(checkboxsErrors).join('\n'));
         }
 

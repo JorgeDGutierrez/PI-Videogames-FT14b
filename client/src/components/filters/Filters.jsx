@@ -7,6 +7,7 @@ function Filters() {
     const dispatch = useDispatch();
     const handleFilter = (e) => {
         dispatch(filterByGenres(e.target.value));
+        
     }
     const handleAlphabet = (e) => {
         dispatch(sortByAlphabet(e.target.value));
@@ -14,6 +15,9 @@ function Filters() {
     const handleRating = (e) => {
         dispatch(sortByRating(e.target.value));
     }
+    
+    
+    
     return (
         <div>
             <div className={s.container}>
@@ -63,6 +67,7 @@ function Filters() {
                     <option value="less">Less Rated ☆</option>
                 </select>
             </div>
+            
         </div>
     )
 }

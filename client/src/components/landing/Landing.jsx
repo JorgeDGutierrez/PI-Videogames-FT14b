@@ -13,6 +13,7 @@ function Landing() {
             <Link to='/videogames'>
                 <button className={s.boton}>Play!</button>
             </Link>
+            
         </div>
     )
 }
