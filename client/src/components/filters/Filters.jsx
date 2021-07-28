@@ -56,7 +56,7 @@ function Filters() {
                     <span className={s.span}>Order by Alphabet</span>
                 </label>
                 <select id="order" onChange={handleAlphabet} className={s.select}>
-                    <option value="">Default</option>
+                    <option value=''>Default</option>
                     <option value="az">A-Z</option>
                     <option value="za">Z-A</option>
                 </select>
@@ -75,9 +75,10 @@ function Filters() {
                 <label htmlFor="filterDB">
                     <span className={s.span}>videojuegos creados</span>
                 </label>
-                <select id="filterDB" onChange={handleDB} className={s.select}>
-                    <option value="">Default</option>
+                <select id="filterDB" onChange={(handleDB)} className={s.select}>
+                    <option value= '' >Default</option>
                     <option value="status">base de datos</option>
+                    
                     
                 </select>
             </div>
