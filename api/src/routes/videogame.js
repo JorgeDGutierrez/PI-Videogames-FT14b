@@ -5,10 +5,11 @@ const router = Router();
 const axios = require('axios').default;
 const { Videogame, Genre } = require('../db');
 
+const URL = 'https://api.rawg.io/api/games'
 
 //POST a /videogame
 router.post('/', async (req, res) => {//con POST se crean los videojuegos
-    let { name, description, released, rating, genres, platforms } = req.body;
+    let { name, description, released, rating, genres, platforms,status} = req.body;
     //se requiere el body para poder recibir los datos del formarulario
     let genreDt = genres.map(gen => {
         //con map se hace el recorrido de los datos existentes y vamos a 
@@ -30,9 +31,8 @@ let videogame = await Videogame.create({//se crea y se manda a la base de datos
     description,
     released,
     rating,
-    platforms
-    
-            
+    platforms,
+    status:'created'
     })
     allGenres.forEach(gen => videogame.setGenres(gen[0]));
     //se hace el recorrido de los generos y los muestra 
@@ -68,7 +68,7 @@ router.get('/:videogameid', async (req, res) => {
         /**
          * con try se intenta hacer esto
          */
-        const response = await axios.get(`https://api.rawg.io/api/games/${videogameid}?key=${API_KEY}`);
+        const response = await axios.get(`${URL}/${videogameid}?key=${API_KEY}`);
         //se utiliza la promesa para poder obtener los datos de la api
         let { name, background_image, genres, description, released: released, rating, platforms } = response.data;// estas son las propiedades que se necesitan de la api
         genres = genres.map(g => g.name);
@@ -90,6 +90,5 @@ router.get('/:videogameid', async (req, res) => {
     }
 })
 
-
-
+    
 module.exports = router;//se exporta el router

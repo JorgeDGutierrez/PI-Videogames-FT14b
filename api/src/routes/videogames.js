@@ -6,7 +6,7 @@ const axios = require('axios').default;
 const { Videogame, Genre } = require('../db');
 const genres = require('../routes/genres.js')
 
-
+const URL = 'https://api.rawg.io/api/games'
  
    router.get('/', async (req, res) => {
     let videogamesDb = await Videogame.findAll({
@@ -26,7 +26,7 @@ const genres = require('../routes/genres.js')
     if (req.query.name) {// se requiere el query para obtenere el nombre del videojuego
         try {
             let name = req.query.name;
-            let response = await axios.get(`https://api.rawg.io/api/games?search=${name}&key=${API_KEY}`);
+            let response = await axios.get(`${URL}?search=${name}&key=${API_KEY}`);
             if (!response.data.count) return res.status(404).send(`No se encontro ningun videojuego con el nombre "${req.query.name}"`);
             // response.data.count dice que si no hay ningun videojuego va a mandar el 400
             // la funcion count se usa para contar todos los parametros iguales dentro de la data
@@ -47,7 +47,7 @@ const genres = require('../routes/genres.js')
         try {// se hacen las paginaciones para que traiga los videojuegos de la api y de la base de datos
             let pages = 0;
             let results = [...videogamesDb];// nos trae todos los datos del estado anterior
-            let response = await axios.get(`https://api.rawg.io/api/games?key=${API_KEY}`);
+            let response = await axios.get(`${URL}?key=${API_KEY}`);
             //axios trae los videojuegos de la api
             while (pages < 4) {// mientras las paginas  sean mayor a cuatro se va a ir sumaando una a una
                 pages++;

@@ -29,7 +29,13 @@ module.exports = (sequelize) => {
     platforms: {
       type: DataTypes.STRING,
       allowNull: false
+    },
+    status:{
+      type: DataTypes.STRING,
+      allowNull: false
     }
+  
+    
   
   });
 };

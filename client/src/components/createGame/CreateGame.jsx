@@ -11,7 +11,8 @@ function CreateGame() {
         released: '',
         rating: 0,
         genres: [],
-        platforms: ''
+        platforms: '',
+        
     });
 
     const handleChange = e => {
