@@ -23,10 +23,10 @@
 }
 
 .container {
-    background: rgba(252, 254, 255, 0.74);;
+    background: rgba(205, 212, 214, 0.835);;
     margin: auto;
-    width: 1000px;
-    height: 606px;
+    width: 1200px;
+    height: 610px;
     border-radius: 5%;
     background-image: linear-gradient(270deg, rgba(236, 225, 223, 0.64) 16%, rgba(180, 98, 98, 0.56) 66%);
     

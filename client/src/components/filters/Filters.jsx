@@ -1,7 +1,9 @@
 import React from 'react';
 import { useDispatch } from 'react-redux';
-import { filterByGenres, filterDB, sortByAlphabet, sortByRating } from '../../redux/actions';
+import { /* filterByDate, */ filterByGenres, filterDB, getVideogames, sortByAlphabet, sortByRating } from '../../redux/actions';
 import s from './Filters.module.css';
+import './Filtes.css'
+
 
 function Filters() {
     const dispatch = useDispatch();
@@ -18,8 +20,14 @@ function Filters() {
     const handleDB = (e) =>  {
         
         dispatch(filterDB(e.target.value));
-
-}
+        
+    }
+    const handleGames = (e) => {
+        dispatch(getVideogames(e.target.value));
+    }
+    /* const handleDate = (e) => {
+        dispatch(filterByDate(e.target.value));
+    } */
     
     
     return (
@@ -66,23 +74,37 @@ function Filters() {
                     <span className={s.span}>Order by Rating</span>
                 </label>
                 <select id="orderRating" onChange={handleRating} className={s.select}>
-                    <option value="">Default</option>
+                    <option  value="">Default</option>
                     <option value="high">Highest Rated ★</option>
                     <option value="less">Less Rated ☆</option>
                 </select>
             </div>
             <div className={s.container}>
                 <label htmlFor="filterDB">
-                    <span className={s.span}>videojuegos creados</span>
+                    
                 </label>
-                <select id="filterDB" onChange={(handleDB)} className={s.select}>
-                    <option value= '' >Default</option>
-                    <option value="status">base de datos</option>
+                
+                    <button className={s.boton} id="filterDB" onClick={handleGames}   value="Default">Videogames</button>
                     
-                    
-                </select>
+
             </div>
-            
+            <div className={s.container}>
+                <label htmlFor="filterDB">
+                    
+                </label>
+
+                    <button className={s.boton} id="filterDB" onClick={handleDB}   value="status">VideoJuegos creados</button>
+
+            </div>
+                {/* <div className={s.container}>
+                    <form >
+                    <label htmlFor="filterDate">
+                        <span className={s.span}>filter by date</span>
+                        <input className={s.input} name='released' onChange={handleDate}  type="month"  id="fecha" class="form-control"
+                        required />                       
+                    </label>                   
+                    </form>
+                </div> */}
         </div>
     )
 }

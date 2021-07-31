@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { useDispatch } from 'react-redux'
 import { NavLink } from 'react-router-dom';
 import s from './Input.module.css'
-import { searchByName } from '../../redux/actions';
+import { filterByDate, searchByName } from '../../redux/actions';
 import '../../App.css'
 function Navbar() {
     const dispatch = useDispatch();
@@ -17,9 +17,10 @@ function Navbar() {
         
             e.preventDefault();
             dispatch(searchByName(input));
-            setInput('')
-        
-        
+            setInput('')   
+    }
+    const handleDate = (e) => {
+        dispatch(filterByDate(e.target.value));
     }
 
     const [click, setClick] = useState(false);
@@ -37,7 +38,15 @@ function Navbar() {
                     <input onChange={handleInput}  className={s.input} type="text" placeholder='Search games' spellCheck='false' />
                     <button onClick={handleSearch} className={s.search}>Search</button>
                     </form>
-                    
+                    <div >
+                    <form className={s.form}>
+                    <label htmlFor="filterDate" className="nav-logo">
+                        <span className={s.span}>filtrar por fecha</span>
+                        <input  name='released' onChange={handleDate} className={s.input} type="month"  id="fecha" 
+                        required />                       
+                    </label>                   
+                    </form>
+                </div>
                     
                     <ul className={click ? "nav-menu active" : "nav-menu"}>
                         <li className="nav-item">

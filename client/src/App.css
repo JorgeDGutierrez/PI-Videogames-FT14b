@@ -29,11 +29,11 @@ body {
   /* background-color: #316e74; */
  /*  background: rgba(52, 109, 163, 0.363); */
   background: linear-gradient(0deg, rgba(180, 129, 105, 0.815) 0%, rgba(105, 107, 230, 0.562) 100%, rgba(58, 94, 194, 0.507) 100%);
-  height: 50px;
+  height: 43px;
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 1.4rem;
+  font-size: 1.6rem;
   position: sticky;
   top: 0;
   z-index: 20;
@@ -176,30 +176,30 @@ color: #ddddcc;
 .page-link {
   position: relative;
   display: block;
-  padding: .5rem .75rem;
-  margin-left: 10px;
-  line-height: 1.25;
+  padding: .5rem .80rem;
+  margin-left: 20px;
+  line-height: 1.15;
   text-decoration: none;
-  color: #000000;
+  color: #e6dcdc;
   font-family: 'Press Start 2P';
-  background-color: rgba(94, 6, 6, 0.4);
-  border: 1px solid #0a2c4e;
+  background-color: rgba(211, 16, 16, 0.472);
+  border: 2px solid #1d5996;
   border-radius: 50%;
 }
 
 .page-link:hover {
   transition: 500ms;
   z-index: 2;
-  color: #bba1a1;
+  color: #c09a1c;
   text-decoration: none;
-  background-color: #000000;
-  border-color: #bbc4ce
+  background-color: #24286d;
+  border-color: #3a526b
 }
 
 .page-link:focus {
   z-index: 2;
   outline: 0;
-  box-shadow: 0 0 0 .2rem rgba(9, 255, 0, 0.25)
+  box-shadow: 0 0 0 .2rem rgba(19, 170, 32, 0.25)
 }
 
 .pagination {
@@ -207,6 +207,6 @@ color: #ddddcc;
   display: flex;
   padding-left: 0;
   list-style: none;
-  border-radius: .25rem;
+  border-radius: .28rem;
   justify-content: center;
 }

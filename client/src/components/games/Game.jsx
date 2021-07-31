@@ -16,7 +16,7 @@ function Game({ props }) {
                     <h5 className={s.title}>{name}</h5>
                     <img src={background_image || 'https://www.eleconomista.com.mx/__export/1581119523386/sites/eleconomista/img/2020/02/07/que-son-esports.jpg_423392900.jpg'} className={s.image} alt={'This background is not available'} />
                     <div className={s.genres}>
-                        {genres}
+                     {genres}
                     </div>
                         
                 </div>

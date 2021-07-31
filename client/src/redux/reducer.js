@@ -1,10 +1,10 @@
-import {FILTER_BY_DB,  FILTER_BY_GENRES,  GET_VIDEOGAMES, GET_VIDEOGAME_DETAIL, SEARCH_BY_NAME, SORT_BY_ALPHABET, SORT_BY_RATING } from '../redux/actions'
+import {FILTER_BY_DATE,FILTER_BY_DB,  FILTER_BY_GENRES,  GET_VIDEOGAMES, GET_VIDEOGAME_DETAIL, SEARCH_BY_NAME, SORT_BY_ALPHABET, SORT_BY_RATING } from '../redux/actions'
 
 
 
 const initalState = {
     videogames: undefined,
-    copyVideogames: undefined,
+    copyVideogames: [],
     videogameDetail: undefined
 }
 function rootReducer(state = initalState, action) {
@@ -44,13 +44,23 @@ function rootReducer(state = initalState, action) {
             return { ...state, videogames: [...state.videogames].sort((a, b) => a.rating > b.rating ? 1 : -1) }
         }
         case FILTER_BY_DB: {
-            const databasefilter =action.payload === 'created'? state.copyVideogames.filter(
+
+            const databasefilter =action.payload === 'created' ? state.copyVideogames.filter(
                 videogames => videogames.status): state.copyVideogames.filter(
                     videogames => videogames.status)
-            return{
-                ...state,
-                videogames:databasefilter}
 
+            return {
+                ...state,
+                videogames:databasefilter
+            }
+
+        }
+        case FILTER_BY_DATE:{
+            if (!action.payload) return { ...state, videogames: state.copyVideogames };
+            return {
+                ...state,
+                videogames: state.copyVideogames.filter(e => e.released.includes(action.payload))
+            }
         }
         
         

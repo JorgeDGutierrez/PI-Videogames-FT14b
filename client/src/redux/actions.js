@@ -57,11 +57,16 @@ export const FILTER_BY_DB = "FILTER_BY_DB";
            
             let response = await axios.get(`${SERVER_URL}/videogames?name=${name}`)
             console.log(response.data)
+            
             return dispatch({ type: FILTER_BY_DB, payload: response.data });
             
-}
+        }
 
-    };
+};
+export const FILTER_BY_DATE = "FILTER_BY_DATE";
+export function filterByDate(payload){
+    return { type: FILTER_BY_DATE, payload: payload };
+}
 
 
 
