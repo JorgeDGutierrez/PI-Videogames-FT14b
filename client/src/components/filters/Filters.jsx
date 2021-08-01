@@ -34,7 +34,7 @@ function Filters() {
         <div>
             <div className={s.container}>
                 <label htmlFor="genres">
-                    <span className={s.span}>Filter by Genres</span>
+                    <span class="input-field col s12" /* className={s.span} */>Filter by Genres</span>
                 </label>
                 <select id='genres' onChange={handleFilter} className={s.select}>
                     <option value=''>Default</option>

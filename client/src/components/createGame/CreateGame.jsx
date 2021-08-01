@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import styles from './CreateGame.module.css'
 import Navbar from '../navbar/Navbar'
+import swal from 'sweetalert';
+
 import axios from 'axios';
 
 function CreateGame() {
@@ -90,19 +92,25 @@ function CreateGame() {
         if (form.platforms.length < 1) checkboxsErrors.push('Platforms is required');
         if (Object.values(errors).length || checkboxsErrors.length) {
         
-            return alert(Object.values(errors).concat(checkboxsErrors).join('\n'));
+            return swal(Object.values(errors).concat(checkboxsErrors).join('\n'));
         }
 
         axios.post('http://localhost:3001/videogame', form)
-        alert(`${form.name} created succesfully`)
+        swal("Esta todo listo", {
+            buttons: [`${form.name} created succesfully`,true],
+          });
+        // swal(`${form.name} created succesfully`)
+        
        
         
     }
     
 
     return (
+        
         <div className={styles.crearJuego}>
             <Navbar />
+            
             <div className={styles.wrapper}>
                 <div className={styles.contenedor}>
                     <h1 className={styles.title}>Create your own Game</h1>

@@ -20,7 +20,7 @@
 }
 
 .contenedor {
-    background: rgba(168, 108, 108, 0.664);;
+    background: rgba(80, 49, 41, 0.931);;
     margin: auto;
     width: 800px;
     height: 590px;
@@ -92,7 +92,7 @@
 }
 
 .error {
-    border: 6px solid rgb(68, 1, 1);
+    border: 3.2px solid rgb(68, 1, 1);
 }
 
 

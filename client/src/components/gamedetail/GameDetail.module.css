@@ -23,19 +23,19 @@
 }
 
 .container {
-    background: rgba(205, 212, 214, 0.835);;
+    background: rgba(38, 39, 39, 0.938);;
     margin: auto;
     width: 1200px;
     height: 610px;
     border-radius: 5%;
-    background-image: linear-gradient(270deg, rgba(236, 225, 223, 0.64) 16%, rgba(180, 98, 98, 0.56) 66%);
+    background-image: linear-gradient(270deg, rgba(49, 18, 12, 0.64) 16%, rgba(17, 15, 15, 0.56) 66%);
     
 }
 .name {
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-size: 30px;
     padding-top: 10px;
-    color:rgb(3, 1, 1);
+    color:rgb(70, 67, 67);
     text-shadow: 0px 3px 3px rgba(160, 15, 15, 0.897);
     
     
@@ -45,7 +45,7 @@
     text-align: left;
     margin:2%;
     font-weight: 200;
-    color:rgba(19, 12, 6, 0.993);
+    color:rgba(248, 247, 247, 0.993);
     /* text-shadow: 0px 3px 3px rgb(56, 52, 52); */
     letter-spacing: 2pt;      /* para separar entgre letras */
     word-spacing: 5pt;        /* para separacion entre palabras */  
@@ -66,7 +66,7 @@
 
 .genres {
     display:inline-block;
-    color:rgb(3, 1, 1);
+    color:rgba(248, 247, 247, 0.993);
     /* text-shadow: 0px 3px 3px rgb(214, 59, 59); */
     margin-right:40px;
     margin-left:40px;

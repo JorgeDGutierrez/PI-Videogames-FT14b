@@ -19,7 +19,8 @@ router.post('/', async (req, res) => {//con POST se crean los videojuegos
                 name: gen
             }
         })
-    });        
+    });  
+          
     
 let allGenres = await Promise.all(genreDt);
 //allGenres son varias promesas que recibe como parametro la base de datos
