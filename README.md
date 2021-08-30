@@ -8,7 +8,7 @@
 
 <p align="right">
   <img height="200" src="./videogame.png" />
-
+   ![landing](https://user-images.githubusercontent.com/83549945/131281667-b92e18cf-b88d-4d3d-8e99-61be06804992.JPG)
 </p>
 
 ## Objetivos del Proyecto
