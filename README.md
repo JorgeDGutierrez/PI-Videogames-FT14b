@@ -24,10 +24,11 @@
 
 
 
-## Enunciado
+## DEsarrollo del proyecto
 
 Desarrollo de una APP de videojuegos:
 Se ocuparon las siguientes tecnologias:
+
 -React para el Front-End
 -Redux para el control de estados globales
 - CSS 
@@ -42,6 +43,10 @@ FUNCIONALIDAD
 -Filtrado por juegos Agregados
 -Filtrado por Géneros del Videojuego
 -Formulario  para crear videojuegos
+
+
+
+
 ### Únicos Endpoints/Flags que pueden utilizar
 
   - GET https://api.rawg.io/api/games
