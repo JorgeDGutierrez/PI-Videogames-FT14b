@@ -1,7 +1,4 @@
-![muestra videojuegos](https://user-images.githubusercontent.com/83549945/131284260-29b067fe-8108-4f3e-9e04-cac68cfdf140.JPG)
-![videojuegos creados en la base de datos](https://user-images.githubusercontent.com/83549945/131284277-4b7d892f-be99-483b-8bd0-5c6ac0374524.JPG)
-![landing](https://user-images.githubusercontent.com/83549945/131284196-fd61df42-0cd6-4a73-929a-ea53088a4235.JPG)
-<p align='left'>
+
     <img src='https://static.wixstatic.com/media/85087f_0d84cbeaeb824fca8f7ff18d7c9eaafd~mv2.png/v1/fill/w_160,h_30,al_c,q_85,usm_0.66_1.00_0.01/Logo_completo_Color_1PNG.webp' </img>
 </p>
 
@@ -9,6 +6,10 @@
 
 <p align="right">
   <img height="200" src="./videogame.png" />
+  ![muestra videojuegos](https://user-images.githubusercontent.com/83549945/131284260-29b067fe-8108-4f3e-9e04-cac68cfdf140.JPG)
+![videojuegos creados en la base de datos](https://user-images.githubusercontent.com/83549945/131284277-4b7d892f-be99-483b-8bd0-5c6ac0374524.JPG)
+![landing](https://user-images.githubusercontent.com/83549945/131284196-fd61df42-0cd6-4a73-929a-ea53088a4235.JPG)
+<p align='left'>
 </p>
 
 ## Objetivos del Proyecto
