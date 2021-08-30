@@ -49,24 +49,14 @@
 
 
 
-### Únicos Endpoints/Flags que pueden utilizar
+### Los endpoints utilizados fueron:
 
   - GET https://api.rawg.io/api/games
   - GET https://api.rawg.io/api/games?search={game}
   - GET https://api.rawg.io/api/genres
   - GET https://api.rawg.io/api/games/{id}
 
-### Requerimientos mínimos:
 
-A continuación se detallaran los requerimientos mínimos para la aprobación del proyecto individial. Aquellos que deseen agregar más funcionalidades podrán hacerlo. En cuanto al diseño visual no va a haber wireframes ni prototipos prefijados sino que tendrán libertad de hacerlo a su gusto pero tienen que aplicar los conocimientos de estilos vistos en el curso para que quede agradable a la vista.
-
-__IMPORTANTE__: No se permitirá utilizar librerías externas para aplicar estilos a la aplicación. Tendrán que utilizar CSS con algunas de las opciones que vimos en dicha clase (CSS puro, CSS Modules o Styled Components)
-
-#### Tecnologías necesarias:
-- [ ] React
-- [ ] Redux
-- [ ] Express
-- [ ] Sequelize - Postgres
 
 #### Frontend
 
