@@ -1,3 +1,4 @@
+![muestra videojuegos](https://user-images.githubusercontent.com/83549945/131286156-87c0b636-ac72-4ea8-85bd-2ca6f441fb25.JPG)
 
    <p align='left'>
     <img src='https://static.wixstatic.com/media/85087f_0d84cbeaeb824fca8f7ff18d7c9eaafd~mv2.png/v1/fill/w_160,h_30,al_c,q_85,usm_0.66_1.00_0.01/Logo_completo_Color_1PNG.webp' </img>
@@ -8,6 +9,9 @@
 
 ## Landing del proyecto
 ![landing](https://user-images.githubusercontent.com/83549945/131284712-003c125f-9023-4c8e-98bc-55541c7d60a0.JPG)
+
+## Muestra todos los videjuegos tanto de la API como de la base de datos creada en Postgresql
+![muestra videojuegos](https://user-images.githubusercontent.com/83549945/131286156-87c0b636-ac72-4ea8-85bd-2ca6f441fb25.JPG)
 
 <p align="right">
   <img height="200" src="./videogame.png" />
