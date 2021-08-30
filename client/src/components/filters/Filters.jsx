@@ -1,8 +1,11 @@
-import React from 'react';
+import React, { Component } from 'react'
 import { useDispatch } from 'react-redux';
 import { /* filterByDate, */ filterByGenres, filterDB, getVideogames, sortByAlphabet, sortByRating } from '../../redux/actions';
 import s from './Filters.module.css';
+
+import Select from 'react-select'
 import './Filtes.css'
+
 
 
 function Filters() {
