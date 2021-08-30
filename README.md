@@ -5,9 +5,10 @@
 </p>
 
 # Individual Project - Henry Videogames
-<p align="right">
-![landing](https://user-images.githubusercontent.com/83549945/131281667-b92e18cf-b88d-4d3d-8e99-61be06804992.JPG)
-</p>
+
+## Landing del proyecto
+![landing](https://user-images.githubusercontent.com/83549945/131284712-003c125f-9023-4c8e-98bc-55541c7d60a0.JPG)
+
 <p align="right">
   <img height="200" src="./videogame.png" />
    
@@ -21,53 +22,26 @@
 - Aprender y practicar el workflow de GIT.
 - Usar y practicar testing.
 
-## Horarios y Fechas
 
-El proyecto tendrá una duración máxima de tres semanas. En el caso de que completan todas las tareas antes de dicho lapso podrán avisar a su Instructor para coordinar una fecha de presentación del trabajo (DEMO).
-
-## Comenzando
-
- 1. Se debe iniciar git con `git init`
- 2. Crear en su cuenta de GitHub un nuevo repo con el nombre `PI-Videogames-FT__` donde `__` es el numero de cohorte en el que estas
- 3. Hacer un commit inicial ej: `git add .` => `git commit -m "init"` => `git branch -M main`
- 4. Seguir las instrucciones de GitHub para 'conectar' su repositorio local con GitHub `git remote add........`
- 5. Hacer push de ese commit `git push -u origin main`
- 6. No olvidar que deben regularmente hacer commit y push para mantener el repo actualizado en la nube
-
-Tendrán un `boilerplate` con la estructura general tanto del servidor como de cliente.
-
-__IMPORTANTE:__ Es necesario contar minimamente con la última versión estable de Node y NPM. Asegurarse de contar con ella para poder instalar correctamente las dependecias necesarias para correr el proyecto.
-
-## BoilerPlate
-
-El boilerplate cuenta con dos carpetas: `api` y `client`. En estas carpetas estará el código del back-end y el front-end respectivamente.
-
-En `api` crear un archivo llamado: `.env` que tenga la siguiente forma:
-
-```
-DB_USER=usuariodepostgres
-DB_PASSWORD=passwordDePostgres
-DB_HOST=localhost
-```
-
-Reemplazar `usuariodepostgres` y `passwordDePostgres` con tus propias credenciales para conectarte a postgres. Este archivo va ser ignorado en la subida a github, ya que contiene información sensible (las credenciales).
-
-Adicionalmente será necesario que creen desde psql una base de datos llamada `videogames`
-
-El contenido de `client` fue creado usando: Create React App.
 
 ## Enunciado
 
-La idea general es crear una aplicación en la cual se puedan ver los distintos videojuegos disponibles junto con información relevante de los mismos utilizando la api externa [rawg](https://rawg.io/apidocs) y a partir de ella poder, entre otras cosas:
-
-  - Buscar videjuegos
-  - Filtrarlos / Ordenarlos
-  - Agregar nuevos videojuegos
-
-__IMPORTANTE__: Para poder utilizar esta API externa es necesario crearse una cuenta para obtener una API Key que luego debera ser incluida en todos los request que hagamos a rawg simplemente agregando `?key={YOUR_API_KEY}` al final de cada endpoint. Agregar la clave en el archivo `.env` para que la misma no se suba al repositorio por cuestiones de seguridad y utilizarla desde allí.
-
-__IMPORTANTE__: Para las funcionalidades de filtrado y ordenamiento NO pueden utilizar los endpoints de la API externa que ya devuelven los resultados filtrados u ordenados sino que deben realizarlo ustedes mismos. En particular alguno de los ordenamientos o filtrados debe si o si realizarse desde el frontend.
-
+Desarrollo de una APP de videojuegos:
+Se ocuparon las siguientes tecnologias:
+-React para el Front-End
+-Redux para el control de estados globales
+- CSS 
+-Node JS 
+- "express"
+-PostgreSQL y Sequelize para la  base de datos
+- Utilice la api de videojuegos (https://rawg.io/apidocs) para guardar los primeros
+FUNCIONALIDAD
+-Ordenamiento por (nombre del videojuego (A-Z /Z-A )
+-Ordenamiento por rating de videojuego (low Rating / high Rating)
+-Búsqueda por nombre del videojuego
+-Filtrado por juegos Agregados
+-Filtrado por Géneros del Videojuego
+-Formulario  para crear videojuegos
 ### Únicos Endpoints/Flags que pueden utilizar
 
   - GET https://api.rawg.io/api/games
