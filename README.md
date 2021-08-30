@@ -25,13 +25,16 @@
 
 
 ## Desarrollo de una APP de videojuegos,se ocuparon las siguientes tecnologias:
--React para el Front-End
--Redux para el control de estados globales
--CSS 
--Node JS 
--express
--PostgreSQL y Sequelize para la  base de datos
--Utilice la api de videojuegos (https://rawg.io/apidocs) para guardar los primeros
+
+- React para el Front-End.
+- Redux para el control de estados globales.
+- CSS. 
+- Node JS.
+- express.
+- PostgreSQL y Sequelize para la  base de datos.
+- Utilice la api de videojuegos (https://rawg.io/apidocs) para guardar los primeros 100 videojuegos.
+
+
 ## FUNCIONALIDAD
 -Ordenamiento por (nombre del videojuego (A-Z /Z-A )
 -Ordenamiento por rating de videojuego (low Rating / high Rating)
